@@ -1,39 +1,76 @@
-.App {
-  text-align: center;
+body{
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.container-flex{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+header{
+  text-align: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #f0f8ff;
+  margin-bottom: 3rem;
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+.form{
+  background-color:#c7d4df;
+  max-width: 600px;
+  min-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.formControl{
+  margin-bottom: 1rem;
+}
+.form .formInput{
+  display: block;
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #363636;
+    font-size: 0.9rem;
+}
+.form .formInput:focus{
+  outline: 0;
+  border-color: #8c8c8c;
+}
+.form label{
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 1rem;
+  color: #363636;
+}
+.buttonPrimary{
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  color: #fff;
+  background-color: #413e55;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.buttonPrimary:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.form .submitButton:hover{
+  background-color: #2d2a3b;
+}
+.profilePic{
+  width: 9rem;
+  height: 9rem;
+  border-radius:100%;
 }
