@@ -44,7 +44,7 @@ const ProfilePicSlice = createSlice({
         },
         removeImage: (state, action) => {
             state.images = state.images.filter((id) => {
-                console.log('id is' + id.urls.small, 'payload is' + action.payload.urls.small)
+                console.log('id is' + id.results[0].urls.small)
                 return id !== action.payload;
             })
         }

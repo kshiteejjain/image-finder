@@ -18,7 +18,6 @@ const UserCard = () => {
     const newCard = () => {
         navigate("/");
         window.location.reload();
-        localStorage.removeItem('users')
     };
 
     return (
@@ -33,8 +32,8 @@ const UserCard = () => {
                             </div>
                             <label>Name: <span>{e.userName}</span></label>
                             <label>Surname: <span> {e.surname}</span></label>
-                            <label>Topic: <span>{e.topic}</span></label>
-                            <label>Other Topic: <span>{e.otherTopic}</span></label>
+                            {e.topic !== 'Other' ? <label>Topic: <span>{e.topic}</span></label> : null}
+                            {e.otherTopic !== '' ? <label>Topic: <span>{e.otherTopic}</span></label> : null}
                         </div>
                     )
                 })}

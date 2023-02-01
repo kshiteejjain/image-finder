@@ -13,12 +13,13 @@ const ProfilePic = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(images.length < 1){
+        if((localStorage.getItem('topic') !== users[0].topic && localStorage.getItem('topic') !== users[0].otherTopic) || images.length < 1){
             dispatch(getImages())
         }
-        if(localStorage.getItem('topic') !== users[0].topic){
-            dispatch(getImages())
-        }
+        window.onbeforeunload = function(event) {
+            console.log('Page Refreshed');
+            navigate("/");
+          };
     }, [dispatch])
 
     const getCurrentImage = (e) => {
