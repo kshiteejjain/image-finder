@@ -61,6 +61,7 @@ header{
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
 }
 .buttonPrimary:disabled{
   opacity: 0.5;
@@ -68,9 +69,4 @@ header{
 }
 .form .submitButton:hover{
   background-color: #2d2a3b;
-}
-.profilePic{
-  width: 9rem;
-  height: 9rem;
-  border-radius:100%;
 }

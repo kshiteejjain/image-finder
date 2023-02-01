@@ -1,3 +1,10 @@
+h1{
+    text-align: center;
+}
+.cardParent{
+    display: flex;
+    justify-content: center;
+}
 .card{
     background-color: #fff;
     display: flex;
@@ -6,7 +13,7 @@
     width: 21rem;
     box-shadow: 0 0 10px #b2b2b2;
     position: relative;
-    margin: 4rem;
+    margin: 1rem;
     border-radius: 0.8rem;
     padding-bottom: 3rem;
 }
@@ -23,6 +30,8 @@
 .cardImage{
     position: relative;
     margin: 4rem 0 2rem 0;
+    width: 9rem;
+    height: 9rem;
 }
 .card label{
     text-align: left;

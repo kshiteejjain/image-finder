@@ -16,6 +16,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Form />} />
+            <Route path="*" element={<Form />} />
             <Route path="UserCard" element={<UserCard />} />
             <Route path="ProfilePic" element={<ProfilePic />} />
           </Routes>

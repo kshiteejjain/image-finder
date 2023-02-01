@@ -1,0 +1,23 @@
+.buttonContainer{
+    display: flex;
+}
+
+.imageContainer{
+    display: inline-block;
+      text-align: center;
+      margin: 0 1rem 1rem 1rem;
+      background-color: #f1d7d7;
+      padding: 1rem;
+      border-radius: 0.5rem;
+  }
+  .profilePic{
+    width: 9rem;
+    height: 9rem;
+    border-radius:100%;
+    -webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+  }
+  .profilePic:hover{
+    transform: rotate(50deg);
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+  }
