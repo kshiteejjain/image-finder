@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getImages, selectedImage, removeImage } from './ProfilePicSlice';
 import { useNavigate } from "react-router-dom";
@@ -17,7 +17,7 @@ const ProfilePic = () => {
         if ((localStorage.getItem('topic') !== users[0]?.topic && localStorage.getItem('topic') !== users[0]?.otherTopic) || images.length < 1) {
             dispatch(getImages())
         }
-    }, [])
+    }, [dispatch])
 
     const getCurrentImage = (e) => {
         dispatch(selectedImage(e))
