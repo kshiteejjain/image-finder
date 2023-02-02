@@ -31,8 +31,8 @@ const ProfilePicSlice = createSlice({
         })
         builder.addCase(getImages.fulfilled, (state, action) => {
             state.loading = false;
-            state.images.push(action.payload);
-            console.log(action.payload)
+            state.images = [];
+            state.images.push(...action.payload.results.map(img => img.urls.small));
         })
         builder.addCase(getImages.rejected, (state) => {
             state.loading = true;
@@ -43,10 +43,8 @@ const ProfilePicSlice = createSlice({
             state.selectedImage = action.payload;
         },
         removeImage: (state, action) => {
-            state.images = state.images.filter((id) => {
-                console.log('id is' + id.results[0].urls.small)
-                return id !== action.payload;
-            })
+            const newImages = JSON.parse(JSON.stringify(state.images));
+            state.images = newImages.filter(img => img !== action.payload);
         }
       },
 });

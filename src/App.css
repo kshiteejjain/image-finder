@@ -2,6 +2,18 @@ body{
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #161616;;
+}
+p{
+  display: block;
+    margin-bottom: 40px;
+    color: #dcdcdc;
+    font-weight: 300;
+    font-size: 18px;
+}
+header h1{
+  color: #a3dff5;
+  margin-left: 1rem;
 }
 .container{
   max-width: 1320px;
@@ -15,11 +27,11 @@ header{
   text-align: center;
   display: flex;
   justify-content: center;
-  background-color: #f0f8ff;
-  margin-bottom: 3rem;
+  border-bottom: 1px solid #282828;
+  margin-bottom: 5rem;
 }
 .form{
-  background-color:#c7d4df;
+  background-color:#fff;
   max-width: 600px;
   min-width: 600px;
   margin: 0 auto;
@@ -33,10 +45,10 @@ header{
   display: block;
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #cccccc;
     border-radius: 2px;
     box-sizing: border-box;
-    color: #363636;
+    color: #161616;
     font-size: 0.9rem;
 }
 .form .formInput:focus{
@@ -50,23 +62,28 @@ header{
   color: #363636;
 }
 .buttonPrimary{
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ddd;
+  padding: 1rem 2rem;
   color: #fff;
-  background-color: #413e55;
+  background-color: #5268ff;
+  border:none;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 3rem;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  display: inline-block;
 }
 .buttonPrimary:disabled{
   opacity: 0.5;
   cursor: not-allowed;
 }
-.form .submitButton:hover{
-  background-color: #2d2a3b;
+.buttonPrimary:hover{
+  background-color: #4659d7;
+}
+.form .buttonPrimary{
+  width: 100%;
+  display: flex;
+    justify-content: center;
 }

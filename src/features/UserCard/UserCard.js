@@ -21,7 +21,7 @@ const UserCard = () => {
     };
 
     return (
-        <div>
+        <div className='cardWrapper'>
             <h1>User Card</h1>
             <div className='cardParent'>
                 {users?.map((e, i) => {

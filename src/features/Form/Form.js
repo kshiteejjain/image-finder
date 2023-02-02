@@ -2,12 +2,13 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addUser } from "./FormSlice";
+import arrow from '../../assets/right-arrow.svg';
 
 const Form = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [isOtherTopic, setIsOtherTopic] = useState();
-    const disabledButton = <button type="submit" Link to="/ProfilePic" className='buttonPrimary' disabled>Next</button>;
+    const disabledButton = <button type="submit" className='buttonPrimary' disabled>Next</button>;
     const [values, setValues] = useState({
         userName: '', surname: '', topic: '', otherTopic: ''
     });
@@ -63,7 +64,7 @@ const Form = () => {
                         <input type="text" className="formInput" value={values.otherTopic} name="otherTopic" onChange={handleChange} />
                     </div>
                 }
-                {values.userName === '' ? disabledButton : values.surname === '' || values.topic === '' ? disabledButton : <button type="submit" Link to="/ProfilePic" className='buttonPrimary'>Next</button>}
+                {values.userName === '' ? disabledButton : values.surname === '' || values.topic === '' ? disabledButton : <button type="submit" className='buttonPrimary'>  Next &nbsp; <img src={arrow} alt="Logo" width='20' /></button>}
             </form>
         </div>
     )

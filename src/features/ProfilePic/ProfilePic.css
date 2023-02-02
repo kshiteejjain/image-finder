@@ -1,23 +1,78 @@
-.buttonContainer{
-    display: flex;
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.imageContainer{
-    display: inline-block;
-      text-align: center;
-      margin: 0 1rem 1rem 1rem;
-      background-color: #f1d7d7;
-      padding: 1rem;
-      border-radius: 0.5rem;
-  }
-  .profilePic{
-    width: 9rem;
-    height: 9rem;
-    border-radius:100%;
-    -webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
-  }
-  .profilePic:hover{
-    transform: rotate(50deg);
-    opacity: 1;
-    -webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
-  }
+.imageContainer {
+  display: inline-block;
+  text-align: center;
+  margin: 0 1rem 1rem 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.imageContainer:hover {
+  background-color: #a3dff5;
+}
+
+.profilePic {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.profilePic:hover {
+  transform: rotate(50deg);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+h2 {
+  color: #fff;
+}
+
+.acceptButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #fff;
+  background-color: #5268ff;
+  font-size: 0.8rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.acceptButton:hover {
+  background-color: #4659d7;
+}
+
+.rejectButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #fff;
+  background-color: #161616;
+  font-size: 0.8rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.rejectButton:hover {
+  background-color: #414141;
+}
+.emptyStateProfile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
