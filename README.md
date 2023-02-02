@@ -9,7 +9,7 @@
 This project has been created using Redux Toolkit with React.
  - How to handle multiple state wth redux store
  - How to get one slice value in another slice
- - Condiotinally calling API params
+ - Conditionally calling API params
  - Familiar with useSelector
 
 ### TechStack:
