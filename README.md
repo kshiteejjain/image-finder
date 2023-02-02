@@ -4,6 +4,10 @@
 
 ## React + Redux Toolkit + Unsplash API
 This project has been created using Redux Toolkit with React.
+ - How to handle multiple state wth redux store
+ - How to get one slice value in another slice
+ - Condiotinally calling API params
+ - Familiar with useSelector
 
 ### TechStack:
  - React
@@ -12,13 +16,6 @@ This project has been created using Redux Toolkit with React.
  - API Integration
  - React Bootstrap
  
- 
-### Takeaway:
-
- - How to handle multiple state wth redux store
- - How to get one slice value in another slice
- - Condiotinally calling API params
- - Familiar with useSelector
 
 ### Application Flow:
  - Add Name, Surname, Topic in given form
