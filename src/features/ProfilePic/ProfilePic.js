@@ -9,7 +9,7 @@ import './ProfilePic.css';
 
 const ProfilePic = () => {
     const dispatch = useDispatch();
-    const { images } = useSelector((state) => state.imageList);
+    const { images, loading } = useSelector((state) => state.imageList);
     const users = useSelector(store => store.users);
     const navigate = useNavigate();
 

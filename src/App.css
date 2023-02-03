@@ -102,11 +102,11 @@ header{
     justify-content: space-evenly;
   }
   .imageContainer{
-    flex-basis: 37%;
+    width: 40%;
     margin: 0 0 1rem 0 !important;
-    padding: 5% !important;
+    padding: 2% !important;
   }
-  .profilePic {
+  .imageContainer .profilePic {
     width: 6rem;
     height: 6rem;
   }
