@@ -119,4 +119,20 @@ header{
   .emptyStateProfile p{
     text-align: center;
   }
+  .acceptButton{
+    padding: 0.5rem 0.5rem;
+  }
+  .rejectButton{
+    padding: 0.5rem 0.5rem;
+  }
+  .card{
+    width: 100%;
+  }
+  .cardParent{
+    width: 100%;
+  }
+  .cardImage{
+    text-align: center;
+    height: 7rem;
+  }
 }
