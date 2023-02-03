@@ -87,3 +87,36 @@ header{
   display: flex;
     justify-content: center;
 }
+
+@media(max-width:767px){
+  .form{
+    max-width: 73%;
+    min-width: auto;
+  }
+  header{
+    margin-bottom: 3rem;
+  }
+  .imageWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .imageContainer{
+    flex-basis: 37%;
+    margin: 0 0 1rem 0 !important;
+    padding: 5% !important;
+  }
+  .profilePic {
+    width: 6rem;
+    height: 6rem;
+  }
+  h2{
+    margin: 1rem;
+  }
+  .emptyStateProfile{
+    padding: 1rem;
+  }
+  .emptyStateProfile p{
+    text-align: center;
+  }
+}
