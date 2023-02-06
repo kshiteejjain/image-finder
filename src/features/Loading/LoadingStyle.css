@@ -1,0 +1,16 @@
+.loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+.loader img{
+    opacity: 0.8;
+}
+.loader h3{
+    color:#fff;
+    font-weight: 300;
+    font-size: 15px;
+    color: #a4a4a4;
+}

@@ -9,6 +9,7 @@ const UserSlice = createSlice({
         addUser: (state, action) => {
             state.push(action.payload);
             localStorage.setItem('users', JSON.stringify(action.payload))
+            console.log(action.payload);
         }
     }
 });

@@ -6,6 +6,7 @@ import './UserCard.css';
 
 const UserCard = () => {
     const [currentImage, setCurrentImage] = useState([]);
+    // const [combineData, setCombineData] = useState([]);
     const users = useSelector(store => store.users);
     const navigate = useNavigate();
     const { selectedImage } = useSelector(state => ({
@@ -25,16 +26,16 @@ const UserCard = () => {
         <div className='cardWrapper'>
             <h1>User Card</h1>
             <div className='cardParent'>
-                {users?.map((e, i) => {
+                {currentImage?.map((e, i) => {
                     return (
                         <div className='card' key={i}>
                             <div className='cardImage'>
-                                <img alt='Profile' src={currentImage} className='profilePic' />
+                                <img alt='Profile' src={e} className='profilePic' />
                             </div>
-                            <label>Name: <span>{e.userName}</span></label>
-                            <label>Surname: <span> {e.surname}</span></label>
-                            {e.topic !== 'Other' ? <label>Topic: <span>{e.topic}</span></label> : null}
-                            {e.otherTopic !== '' ? <label>Topic: <span>{e.otherTopic}</span></label> : null}
+                            <label>Name: <span>{users[0].userName}</span></label>
+                            <label>Surname: <span> {users[0].surname}</span></label>
+                            {users[0].topic !== 'Other' ? <label>Topic: <span>{users[0].topic}</span></label> : null}
+                            {users[0].otherTopic !== '' ? <label>Topic: <span>{users[0].otherTopic}</span></label> : null}
                         </div>
                     )
                 })}

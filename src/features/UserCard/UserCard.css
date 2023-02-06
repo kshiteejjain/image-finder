@@ -10,6 +10,7 @@ h1{
 .cardParent{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .card{
     background-color: #fff;
