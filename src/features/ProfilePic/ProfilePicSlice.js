@@ -48,9 +48,6 @@ const ProfilePicSlice = createSlice({
         removeImage: (state, action) => {
             const newImages = JSON.parse(JSON.stringify(state.images));
             state.images = newImages.filter(img => img !== action.payload);
-            if(state.images > 1){
-                alert('as');
-            }
         }
     },
 });

@@ -12,6 +12,7 @@
   padding: 1rem;
   border-radius: 0.5rem;
   border: 5px solid #fff;
+  position: relative;
 }
 
 .imageContainer:hover {
@@ -79,4 +80,14 @@ h2 {
 }
 .imageContainer.active {
   border: 5px solid #28a745;
+}
+.checkmark{
+  position: absolute;
+  width: 24px;
+  right: 5px;
+  top: 5px;
+  display: none;
+}
+.imageContainer.active .checkmark{
+  display: block;
 }

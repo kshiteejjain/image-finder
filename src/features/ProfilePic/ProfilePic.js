@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getImages, selectedImage, removeImage } from './ProfilePicSlice';
 import { useNavigate } from "react-router-dom";
+import Checkmark from '../../assets/checkmark.svg';
 // import Loading from '../Loading/Loading';
 
 import './ProfilePic.css';
@@ -15,11 +16,13 @@ const ProfilePic = () => {
     const users = useSelector(store => store.users);
     const navigate = useNavigate();
     let pageId = 0;
+    
 
     useEffect(() => {
         if ((localStorage.getItem('topic') !== users.slice(-1)[0]?.topic && localStorage.getItem('topic') !== users.slice(-1)[0]?.otherTopic) || images.length < 1) {
             dispatch(getImages(pageId));
             pageId += 1;
+            console.log(pageId)
          }
        // dispatch(getImages())
     }, [images])
@@ -49,9 +52,9 @@ const ProfilePic = () => {
             <h2>Please Select one image for your profile </h2>
                 <div className='imageWrapper'>
                 {images?.map((img, i) => {
-                    console.log(activeImage, img)
                     return (
                         <div className={activeImage?.includes(img) ?  'active imageContainer' : 'imageContainer'}  key={i}>
+                            <img src={Checkmark} className='checkmark' alt='profile' />
                             <img src={img} className='profilePic' alt='profile' />
                             <div className='buttonContainer'>
                                 <button className='acceptButton' onClick={() => getCurrentImage(img)}>Accept</button>
@@ -60,7 +63,7 @@ const ProfilePic = () => {
                         </div>
                     );
                 })}
-            </div><p className='buttonPrimary' onClick={handleNext}> Next </p></div>}
+            </div><div className='align-center'><p className='buttonPrimary' onClick={handleNext}> Next </p></div></div>}
         </>
     )
 };
