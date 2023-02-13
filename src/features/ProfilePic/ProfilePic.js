@@ -59,7 +59,11 @@ const ProfilePic = () => {
                         </div>
                     );
                 })}
-            </div><div className='align-center'><p className='buttonPrimary' onClick={handleNext}> Next </p></div></div>}
+            </div>
+            <div className='align-center'>
+                {activeImage.length > 0 ? <p className='buttonPrimary' onClick={handleNext}> Next </p> : null}
+            </div>
+        </div>}
         </>
     )
 };

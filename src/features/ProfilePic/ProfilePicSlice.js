@@ -12,11 +12,11 @@ export const getImages = createAsyncThunk('imageList/images',
         try{
             if (topic === 'Other') {
                 localStorage.setItem('topic', otherTopic)
-                return fetch(`${IMAGE_API}${otherTopic}${ACCESS_KEY}`)
+                return fetch(`${IMAGE_API}${otherTopic}${pageParam}${pageId}${ACCESS_KEY}`)
                     .then((res) => res.json());
             } else {
                 localStorage.setItem('topic', topic)
-                return fetch(`${IMAGE_API}${topic}+${pageParam}+${pageId}+${ACCESS_KEY}`)
+                return fetch(`${IMAGE_API}${topic}${pageParam}${pageId}${ACCESS_KEY}`)
                     .then((res) => res.json());
             }
         }

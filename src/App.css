@@ -90,6 +90,10 @@ header{
 .align-center{
   text-align: center;
 }
+.error{
+  color: #c60606;
+  font-weight: bold;
+}
 
 @media(max-width:767px){
   .form{
