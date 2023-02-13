@@ -7,7 +7,7 @@ import Checkmark from '../../assets/checkmark.svg';
 
 import './ProfilePic.css';
 
-
+export let pageId =  0;
 
 const ProfilePic = () => {
     const dispatch = useDispatch();
@@ -15,16 +15,12 @@ const ProfilePic = () => {
     const activeImage  = useSelector((state) => state.imageList.selectedImage);
     const users = useSelector(store => store.users);
     const navigate = useNavigate();
-    let pageId = 0;
-    
 
     useEffect(() => {
         if ((localStorage.getItem('topic') !== users.slice(-1)[0]?.topic && localStorage.getItem('topic') !== users.slice(-1)[0]?.otherTopic) || images.length < 1) {
             dispatch(getImages(pageId));
-            pageId += 1;
-            console.log(pageId)
+            pageNum =  ++pageId;
          }
-       // dispatch(getImages())
     }, [images])
 
     const getCurrentImage = (e) => {
@@ -49,7 +45,7 @@ const ProfilePic = () => {
         <>
             {images?.length < 1 && users.length < 1 ? <div className='emptyStateProfile'> <h2>Whoops..! </h2> <p>Your settings are reset due to page refresh, please click below to create new user card.</p> <span onClick={newCard} className='buttonPrimary'>Make New Card</span></div> : null}
             {loading ? null :  <div>
-            <h2>Please Select one image for your profile </h2>
+            <h2 className='flexHeading'>Please Select one image for your profile <span className='imageCount'>Visible Images: {images.length} </span></h2>
                 <div className='imageWrapper'>
                 {images?.map((img, i) => {
                     return (
@@ -68,4 +64,5 @@ const ProfilePic = () => {
     )
 };
 
+export let pageNum;
 export default ProfilePic;

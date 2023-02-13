@@ -1,20 +1,27 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { IMAGE_API, ACCESS_KEY } from "../../app/utils/constant";
+import {pageId} from './ProfilePic';
 
 export const getImages = createAsyncThunk('imageList/images',
-    (async, { getState }) => {
+    (async, { getState, rejectWithValue }) => {
         const store = getState();
         const topic = store.users.slice(-1)[0].topic;
         const otherTopic = store.users.slice(-1)[0].otherTopic;
-        //let pageNum = '&page=' ${pageId};
-        if (topic === 'Other') {
-            localStorage.setItem('topic', otherTopic)
-            return fetch(`${IMAGE_API}${otherTopic}${ACCESS_KEY}`)
-                .then((res) => res.json());
-        } else {
-            localStorage.setItem('topic', topic)
-            return fetch(`${IMAGE_API}${topic}${ACCESS_KEY}`)
-                .then((res) => res.json());
+        const pageParam = '&page=';
+        
+        try{
+            if (topic === 'Other') {
+                localStorage.setItem('topic', otherTopic)
+                return fetch(`${IMAGE_API}${otherTopic}${ACCESS_KEY}`)
+                    .then((res) => res.json());
+            } else {
+                localStorage.setItem('topic', topic)
+                return fetch(`${IMAGE_API}${topic}+${pageParam}+${pageId}+${ACCESS_KEY}`)
+                    .then((res) => res.json());
+            }
+        }
+        catch(error){
+            console.log(error);
         }
     });
 
